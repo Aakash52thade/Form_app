@@ -1,0 +1,32 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+### Step 2: Verify Your Vercel Settings
+
+When deploying, make sure these settings are correct:
+
+- **Build Command**: `npm run build` ✅
+- **Output Directory**: `dist` ✅ (NOT `build`)
+- **Install Command**: `npm install` ✅
+
+### Step 3: Check Your File Structure
+
+Make sure your structure looks like this:
+```
+myform/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vercel.json  ← Add this file
+└── vite.config.js
